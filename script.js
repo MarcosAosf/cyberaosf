@@ -7,6 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
         { type: 'output', text: 'MarcosAosf - Network Support Analyst & Cybersecurity Student' },
         { type: 'command', text: 'cat skills.txt' },
         { type: 'output', text: '[OK] Redes | Hardening | Python | Bash | Forense' },
+        { type: 'command', text: 'python3 zterm_vulnscanner.py -t 192.168.1.1 -o report.md' },
+        { type: 'output', text: '[*] Iniciando scan silencioso em 192.168.1.1...' },
+        { type: 'output', text: '[*] Consultando CVEs para OpenSSH 8.2p1...' },
+        { type: 'output', text: '[+] Concluído! Relatório salvo em: report.md', wait: true },
         { type: 'command', text: './run_portfolio.sh' },
         { type: 'output', text: 'Initializing secure connection...', wait: true }
     ];
