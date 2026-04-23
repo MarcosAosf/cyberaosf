@@ -153,8 +153,29 @@ h2 {
 .terminal-body {
     padding: 1.5rem;
     min-height: 120px;
+    max-height: 250px;
+    overflow-y: auto;
     color: var(--neon-green);
     font-size: 1.1rem;
+}
+
+/* Custom Scrollbar for Terminal */
+.terminal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.terminal-body::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+.terminal-body::-webkit-scrollbar-thumb {
+    background: rgba(0, 255, 65, 0.4);
+    border-radius: 4px;
+}
+
+.terminal-body::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 255, 65, 0.8);
 }
 
 .typing-text {
