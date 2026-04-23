@@ -138,4 +138,64 @@ document.addEventListener('DOMContentLoaded', () => {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
     });
+
+    // --- Hack to Unlock Logic ---
+    const btnHack = document.getElementById('btn-hack');
+    const miniTerminal = document.getElementById('mini-terminal');
+    const hackInterface = document.getElementById('hack-interface');
+    const projectsContent = document.getElementById('projects-content');
+
+    if (btnHack && miniTerminal && hackInterface && projectsContent) {
+        btnHack.addEventListener('click', () => {
+            // Hide button, show terminal
+            btnHack.style.display = 'none';
+            miniTerminal.style.display = 'block';
+
+            const hackLines = [
+                "Bypassing perimeter firewall...",
+                "Injecting payloads into portal...",
+                "Escalating privileges to ROOT...",
+                "Decrypting project vault data..."
+            ];
+
+            let lineIdx = 0;
+            
+            function simulateHacking() {
+                if (lineIdx < hackLines.length) {
+                    const line = document.createElement('div');
+                    line.className = 'hack-text';
+                    line.innerHTML = `> <span class="typing-text"></span>`;
+                    miniTerminal.appendChild(line);
+                    
+                    const span = line.querySelector('.typing-text');
+                    // Changed speed from 30ms to 5ms for rapid typing
+                    typeText(span, hackLines[lineIdx], 5, () => {
+                        lineIdx++;
+                        // Changed line delay from 400ms to 80ms
+                        setTimeout(simulateHacking, 80); 
+                    });
+                } else {
+                    // Final success message
+                    const successLine = document.createElement('div');
+                    successLine.className = 'hack-success';
+                    successLine.innerText = "[ ACCESS GRANTED ]";
+                    miniTerminal.appendChild(successLine);
+
+                    // Unlock the projects
+                    // Changed unlock delay from 1500ms to 600ms
+                    setTimeout(() => {
+                        hackInterface.style.display = 'none';
+                        projectsContent.classList.remove('locked-content');
+                        projectsContent.classList.add('unlocked');
+                        
+                        // Re-trigger scroll visibility for newly shown items
+                        checkVisibility();
+                    }, 600);
+                }
+            }
+
+            // Start the sequence
+            simulateHacking();
+        });
+    }
 });

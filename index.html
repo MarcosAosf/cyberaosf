@@ -83,9 +83,19 @@
         </section>
 
         <!-- Projects Section -->
-        <section class="projects-section glass-panel fade-in">
+        <section class="projects-section glass-panel fade-in" id="projects-section">
             <h2><i class="fa-solid fa-folder-open neon-icon"></i> Projects & Labs</h2>
-            <div class="projects-grid">
+            
+            <div id="hack-interface" class="hack-interface">
+                <button id="btn-hack" class="cyber-button">
+                    <i class="fa-solid fa-terminal"></i> _INITIATE_HACK
+                </button>
+                <div id="mini-terminal" class="mini-terminal" style="display: none;">
+                    <!-- Javascript will inject hacking sequence here -->
+                </div>
+            </div>
+
+            <div id="projects-content" class="projects-grid locked-content">
                 <!-- Project 1 -->
                 <div class="project-card">
                     <div class="project-img-wrapper">
