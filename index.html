@@ -16,6 +16,13 @@
 </head>
 
 <body>
+    <!-- Language Toggle -->
+    <div class="lang-toggle-container">
+        <button id="lang-toggle" class="lang-toggle">
+            <span id="lang-pt" class="active">PT</span> | <span id="lang-en">EN</span>
+        </button>
+    </div>
+
     <div class="matrix-bg" id="matrix-bg"></div>
     <div class="scanline"></div>
 
@@ -36,7 +43,7 @@
         <div class="grid-layout">
             <!-- About Section -->
             <section class="about-section glass-panel fade-in">
-                <h2><i class="fa-solid fa-user-ninja neon-icon"></i> About Me</h2>
+                <h2><i class="fa-solid fa-user-ninja neon-icon"></i> <span data-i18n="header_about">About Me</span></h2>
                 <div class="profile-info">
                     <div class="profile-img-container">
                         <img src="https://github.com/MarcosAosf.png" alt="MarcosAosf GitHub Avatar" class="profile-img">
@@ -44,7 +51,7 @@
                     <div class="bio">
                         <h3>MarcosAosf</h3>
                         <p class="subtitle">&lt;/Aosf.dev&gt;</p>
-                        <p class="description">Currently working as a Network Support Analyst (N2) & Cybersecurity
+                        <p class="description" data-i18n="desc_role">Currently working as a Network Support Analyst (N2) & Cybersecurity
                             Student.</p>
                         <div class="socials">
                             <a href="https://github.com/MarcosAosf" target="_blank" class="social-btn"><i
@@ -58,18 +65,18 @@
 
             <!-- Focus & Expertise -->
             <section class="focus-section glass-panel fade-in">
-                <h2><i class="fa-solid fa-crosshairs neon-icon"></i> Atuação & Foco</h2>
+                <h2><i class="fa-solid fa-crosshairs neon-icon"></i> <span data-i18n="header_focus">Atuação & Foco</span></h2>
                 <ul class="focus-list">
-                    <li><i class="fa-solid fa-network-wired"></i> Redes, Segurança de Redes, Hardening</li>
-                    <li><i class="fa-brands fa-python"></i> Automação com Python e Bash</li>
-                    <li><i class="fa-solid fa-shield-halved"></i> Estudos em Segurança de Redes e Forense</li>
+                    <li><i class="fa-solid fa-network-wired"></i> <span data-i18n="focus_1">Redes, Segurança de Redes, Hardening</span></li>
+                    <li><i class="fa-brands fa-python"></i> <span data-i18n="focus_2">Automação com Python e Bash</span></li>
+                    <li><i class="fa-solid fa-shield-halved"></i> <span data-i18n="focus_3">Estudos em Segurança de Redes e Forense</span></li>
                 </ul>
             </section>
         </div>
 
         <!-- Tech Stack Section -->
         <section class="tech-section glass-panel fade-in">
-            <h2><i class="fa-solid fa-laptop-code neon-icon"></i> Tech Stack</h2>
+            <h2><i class="fa-solid fa-laptop-code neon-icon"></i> <span data-i18n="header_tech">Tech Stack</span></h2>
             <div class="badges-grid">
                 <span class="badge python"><i class="fa-brands fa-python"></i> PYTHON</span>
                 <span class="badge bash"><i class="fa-solid fa-terminal"></i> BASH SCRIPT</span>
@@ -84,11 +91,12 @@
 
         <!-- Projects Section -->
         <section class="projects-section glass-panel fade-in" id="projects-section">
-            <h2><i class="fa-solid fa-folder-open neon-icon"></i> Projects & Labs</h2>
+            <h2><i class="fa-solid fa-folder-open neon-icon"></i> <span data-i18n="header_projects">Projects & Labs</span></h2>
             
+            <div class="projects-wrapper">
             <div id="hack-interface" class="hack-interface">
                 <button id="btn-hack" class="cyber-button">
-                    <i class="fa-solid fa-terminal"></i> _INITIATE_HACK
+                    <i class="fa-solid fa-terminal"></i> <span data-i18n="btn_hack">_INITIATE_HACK</span>
                 </button>
                 <div id="mini-terminal" class="mini-terminal" style="display: none;">
                     <!-- Javascript will inject hacking sequence here -->
@@ -102,13 +110,13 @@
                         <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=600&auto=format&fit=crop"
                             alt="Project Preview">
                         <div class="project-overlay">
-                            <a href="https://github.com/MarcosAosf" class="btn-view" target="_blank"><i class="fa-solid fa-eye"></i> View</a>
-                            <a href="https://github.com/MarcosAosf" class="btn-code" target="_blank"><i class="fa-brands fa-github"></i> Code</a>
+                            <a href="https://github.com/MarcosAosf" class="btn-view" target="_blank"><i class="fa-solid fa-eye"></i> <span data-i18n="view_btn">View</span></a>
+                            <a href="https://github.com/MarcosAosf" class="btn-code" target="_blank"><i class="fa-brands fa-github"></i> <span data-i18n="code_btn">Code</span></a>
                         </div>
                     </div>
                     <div class="project-info">
                         <h3>ZTerm VulnScanner</h3>
-                        <p>Automated wrapper script that receives an IP/Range, executes a silent Nmap scan, and cross-references services with CVE databases to generate Markdown reports.
+                        <p data-i18n="desc_zterm">Automated wrapper script that receives an IP/Range, executes a silent Nmap scan, and cross-references services with CVE databases to generate Markdown reports.
                         </p>
                         <div class="project-tags">
                             <span>Python</span>
@@ -124,13 +132,13 @@
                         <img src="assets/hardening_toolkit.png"
                             alt="Hardening Toolkit Preview">
                         <div class="project-overlay">
-                            <a href="#" class="btn-view" target="_blank"><i class="fa-solid fa-eye"></i> View</a>
-                            <a href="#" class="btn-code" target="_blank"><i class="fa-brands fa-github"></i> Code</a>
+                            <a href="#" class="btn-view" target="_blank"><i class="fa-solid fa-eye"></i> <span data-i18n="view_btn">View</span></a>
+                            <a href="#" class="btn-code" target="_blank"><i class="fa-brands fa-github"></i> <span data-i18n="code_btn">Code</span></a>
                         </div>
                     </div>
                     <div class="project-info">
                         <h3>Hardening & Governance Toolkit</h3>
-                        <p>Ferramenta de hardening em Bash atuando na camada de infraestrutura. Realiza blindagem de servidores Linux, análise automatizada de logs para detecção de anomalias (Brute Force/Sudo) e gestão inteligente de regras de Firewall (UFW/IPTables).</p>
+                        <p data-i18n="desc_hardening">Ferramenta de hardening em Bash atuando na camada de infraestrutura. Realiza blindagem de servidores Linux, análise automatizada de logs para detecção de anomalias (Brute Force/Sudo) e gestão inteligente de regras de Firewall (UFW/IPTables).</p>
                         <div class="project-tags">
                             <span>Bash</span>
                             <span>Hardening</span>
@@ -145,13 +153,13 @@
                         <img src="https://images.unsplash.com/photo-1563206767-5b18f218e8de?q=80&w=600&auto=format&fit=crop"
                             alt="Project Preview">
                         <div class="project-overlay">
-                            <a href="#" class="btn-view" target="_blank"><i class="fa-solid fa-eye"></i> View</a>
-                            <a href="#" class="btn-code" target="_blank"><i class="fa-brands fa-github"></i> Code</a>
+                            <a href="#" class="btn-view" target="_blank"><i class="fa-solid fa-eye"></i> <span data-i18n="view_btn">View</span></a>
+                            <a href="#" class="btn-code" target="_blank"><i class="fa-brands fa-github"></i> <span data-i18n="code_btn">Code</span></a>
                         </div>
                     </div>
                     <div class="project-info">
                         <h3>Active Directory Lab</h3>
-                        <p>A comprehensive home lab setup using Windows Server to simulate and mitigate attacks like
+                        <p data-i18n="desc_ad">A comprehensive home lab setup using Windows Server to simulate and mitigate attacks like
                             Kerberoasting.</p>
                         <div class="project-tags">
                             <span>Windows</span>
@@ -160,12 +168,13 @@
                     </div>
                 </div>
             </div>
+            </div> <!-- End projects-wrapper -->
         </section>
 
         <!-- Stats Section -->
         <div class="grid-layout stats-grid">
             <section class="stats-section glass-panel fade-in">
-                <h2><i class="fa-solid fa-chart-bar neon-icon"></i> GitHub Stats</h2>
+                <h2><i class="fa-solid fa-chart-bar neon-icon"></i> <span data-i18n="header_stats">GitHub Stats</span></h2>
                 <div class="github-stats-container">
                     <img src="https://github-readme-stats.vercel.app/api?username=MarcosAosf&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117"
                         alt="GitHub Stats">
@@ -175,21 +184,20 @@
             </section>
 
             <section class="htb-section glass-panel fade-in">
-                <h2><i class="fa-solid fa-trophy neon-icon"></i> Achievements</h2>
-                <!-- HackTheBox Badge - Note: You need a real HTB profile ID to use the dynamic badge. Using a placeholder style for now based on the image -->
+                <h2><i class="fa-solid fa-trophy neon-icon"></i> <span data-i18n="header_achievements">Achievements</span></h2>
                 <div class="htb-badge-container">
                     <div class="htb-card">
                         <img src="https://www.hackthebox.eu/badge/image/2930902" alt="HackTheBox Badge"
                             onerror="this.src='https://raw.githubusercontent.com/HackTheBox/logo/master/htb-logo-black.png'; this.style.opacity='0.2'">
                         <div class="htb-info-fallback">
                             <h4>Aosf | Noob</h4>
-                            <p>HackTheBox Enrolled</p>
+                            <p data-i18n="htb_enrolled">HackTheBox Enrolled</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="quote-container mt-4">
-                    <h3><i class="fa-solid fa-bolt neon-icon"></i> Random Dev Quote</h3>
+                    <h3><i class="fa-solid fa-bolt neon-icon"></i> <span data-i18n="header_quote">Random Dev Quote</span></h3>
                     <blockquote class="cyber-quote">
                         "AI is a fundamental risk to the existence of human civilization."<br>
                         <cite>- Elon Musk</cite>
@@ -199,7 +207,7 @@
         </div>
 
         <footer>
-            <p>Initiated by MarcosAosf // Built with <span class="neon-text">Vanilla Code</span></p>
+            <p data-i18n="footer_text">Initiated by MarcosAosf // Built with <span class="neon-text">Vanilla Code</span></p>
         </footer>
     </main>
 

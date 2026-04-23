@@ -154,28 +154,9 @@ h2 {
     padding: 1.5rem;
     min-height: 120px;
     max-height: 250px;
-    overflow-y: auto;
+    overflow-y: hidden;
     color: var(--neon-green);
-    font-size: 1.1rem;
-}
-
-/* Custom Scrollbar for Terminal */
-.terminal-body::-webkit-scrollbar {
-    width: 8px;
-}
-
-.terminal-body::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 4px;
-}
-
-.terminal-body::-webkit-scrollbar-thumb {
-    background: rgba(0, 255, 65, 0.4);
-    border-radius: 4px;
-}
-
-.terminal-body::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 255, 65, 0.8);
+    font-size: 0.9rem;
 }
 
 .typing-text {
@@ -533,10 +514,16 @@ footer {
 
 /* --- Hack to Unlock Feature --- */
 
+.projects-wrapper {
+    position: relative;
+}
+
 .locked-content {
-    display: none !important;
-    opacity: 0;
-    transform: translateY(20px);
+    display: grid !important;
+    filter: blur(4px) grayscale(20%);
+    opacity: 0.7;
+    pointer-events: none;
+    user-select: none;
 }
 
 .unlocked {
@@ -545,18 +532,25 @@ footer {
 }
 
 @keyframes unlockGlitch {
-    0% { opacity: 0; transform: scale(0.98) translateY(20px); filter: blur(4px); }
-    40% { opacity: 0.8; transform: scale(1.02) translateY(-5px); filter: blur(0px); }
-    100% { opacity: 1; transform: scale(1) translateY(0); filter: none; }
+    0% { filter: blur(4px) grayscale(20%); opacity: 0.7; transform: scale(0.98); }
+    50% { filter: blur(1px) grayscale(5%); opacity: 0.85; transform: scale(1.02); }
+    100% { filter: blur(0px) grayscale(0%); opacity: 1; transform: scale(1); }
 }
 
 .hack-interface {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 3rem 0;
-    min-height: 200px;
+    padding: 0;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
     gap: 1.5rem;
     transition: var(--transition);
 }
@@ -634,4 +628,41 @@ footer {
     0% { opacity: 0.8; text-shadow: 0 0 5px var(--neon-green); }
     50% { opacity: 1; text-shadow: 0 0 15px var(--neon-green); }
     100% { opacity: 0.8; text-shadow: 0 0 5px var(--neon-green); }
+}
+
+/* --- Language Toggle --- */
+.lang-toggle-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.lang-toggle {
+    background: rgba(13, 13, 18, 0.8);
+    border: 1px solid var(--neon-green);
+    color: var(--text-muted);
+    padding: 0.5rem 1rem;
+    font-family: var(--font-terminal);
+    font-size: 0.9rem;
+    border-radius: 4px;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    transition: var(--transition);
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.1);
+}
+
+.lang-toggle:hover {
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.3);
+    color: var(--text-light);
+}
+
+.lang-toggle span {
+    transition: var(--transition);
+}
+
+.lang-toggle span.active {
+    color: var(--neon-green);
+    font-weight: bold;
+    text-shadow: 0 0 5px var(--neon-green);
 }
