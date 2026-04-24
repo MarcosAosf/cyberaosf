@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
     canvas.style.position = 'absolute';
     canvas.style.top = '0';
     canvas.style.left = '0';
-    canvas.style.opacity = '0.05';
+    canvas.style.opacity = '0.15';
 
     matrixBg.appendChild(canvas);
 
