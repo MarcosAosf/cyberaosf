@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+﻿document.addEventListener('DOMContentLoaded', () => {
     // Terminal Typing Effect
     const terminalOutput = document.getElementById('terminal-output');
 
@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
             header_achievements: "Conquistas",
             htb_enrolled: "Inscrito no HackTheBox",
             header_quote: "Citação Aleatória",
-            footer_text: "Iniciado por MarcosAosf // Feito com <span class="neon-text">Vanilla Code</span>"
+            footer_text: "Iniciado por MarcosAosf // Feito com <span class='neon-text'>Vanilla Code</span>"
         },
         en: {
             header_about: "About Me",
@@ -233,7 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
             header_achievements: "Achievements",
             htb_enrolled: "HackTheBox Enrolled",
             header_quote: "Random Dev Quote",
-            footer_text: "Initiated by MarcosAosf // Built with <span class="neon-text">Vanilla Code</span>"
+            footer_text: "Initiated by MarcosAosf // Built with <span class='neon-text'>Vanilla Code</span>"
         }
     };
 
@@ -277,3 +277,4 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('portfolio_lang') || 'pt';
     setLanguage(savedLang);
 });
+
