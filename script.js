@@ -1,4 +1,4 @@
-﻿document.addEventListener('DOMContentLoaded', () => {
+﻿function initPortfolio() {
     // Terminal Typing Effect
     const terminalOutput = document.getElementById('terminal-output');
 
@@ -276,5 +276,10 @@
 
     const savedLang = localStorage.getItem('portfolio_lang') || 'pt';
     setLanguage(savedLang);
-});
+}
 
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initPortfolio);
+} else {
+    initPortfolio();
+}
