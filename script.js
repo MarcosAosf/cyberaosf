@@ -6,7 +6,7 @@ function initPortfolio() {
         { type: 'command', text: './run_portfolio.sh' },
         { type: 'output', text: 'Initializing secure connection...', wait: true },
         { type: 'command', text: 'whoami' },
-        { type: 'output', text: 'MarcosAosf - Network Support Analyst & Cybersecurity Student' },
+        { type: 'output', text: 'MarcosAosf - Network Support Analyst & Automation Engineer' },
         { type: 'command', text: 'cat skills.txt' },
         { type: 'output', text: '[OK] Redes | Automação | Hardening | Python | Bash | Cisco' }
     ];
@@ -189,7 +189,7 @@ function initPortfolio() {
     const translations = {
         pt: {
             header_about: "Sobre Mim",
-            desc_role: "Atualmente trabalhando como Analista de Suporte Técnico (N2) & Estudante de Cibersegurança e Engenharia de Redes e Segurança de Dados.",
+            desc_role: "Atualmente trabalhando como Analista de Suporte de Redes (N2) & Engenheiro de Automação, com foco em Cibersegurança e Infraestrutura.",
             header_focus: "Atuação & Foco",
             focus_1: "Redes, Automação de Switches/Roteadores, Hardening",
             focus_2: "Automação com Python (Netmiko, Scapy) e Bash",
@@ -249,7 +249,7 @@ function initPortfolio() {
         },
         en: {
             header_about: "About Me",
-            desc_role: "Currently working as a Level 2 Technical Support Analyst & Student of Cybersecurity and Network Engineering and Data Security.",
+            desc_role: "Currently working as a Network Support Analyst (N2) & Automation Engineer, focusing on Cybersecurity and Infrastructure.",
             header_focus: "Focus & Expertise",
             focus_1: "Networks, Switch/Router Automation, Hardening",
             focus_2: "Automation with Python (Netmiko, Scapy) and Bash",
