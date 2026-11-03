@@ -1,4 +1,4 @@
-function initPortfolio() {
+﻿function initPortfolio() {
     // Terminal Typing Effect
     const terminalOutput = document.getElementById('terminal-output');
 
@@ -238,7 +238,6 @@ function initPortfolio() {
             desc_netops: "Framework de automação de infraestrutura de redes para roteadores e switches Cisco IOS, Mikrotik e Juniper com backup automatizado, diff SHA256 e provisionamento via Jinja2.",
             desc_cisco: "Dashboard interativo para treinamento em redes Cisco com simulador de linha de comando IOS, topologias visuais de roteadores e switches e validação de comandos em tempo real.",
             desc_netpulse: "Cockpit 3D em tempo real para observabilidade de redes cloud, topologia de roteamento e telemetria SOC com Three.js WebGL, gráficos Canvas 60 FPS e OpenTelemetry.",
-            desc_zterm: "Script wrapper automatizado que recebe um IP/Range, executa um scan silencioso do Nmap e cruza os serviços com bases de dados de CVE para gerar relatórios em Markdown.",
             desc_hardening: "Ferramenta de hardening em Bash atuando na camada de infraestrutura. Realiza blindagem de servidores Linux, análise automatizada de logs para detecção de anomalias (Brute Force/Sudo) e gestão inteligente de regras de Firewall (UFW/IPTables).",
             desc_cdpr: "Ferramenta de automação desenvolvida em Bash/PowerShell voltada para infraestrutura de redes e segurança. O script automatiza a captura e análise passiva de pacotes de Camada 2 (Data Link) utilizando o utilitário cdpr e injeção de filtros de rede para mapear, de forma silenciosa e eficiente, a topologia de switches conectados à estação de trabalho.",
             header_stats: "Estatísticas do GitHub",
@@ -298,7 +297,6 @@ function initPortfolio() {
             desc_netops: "Multi-vendor network infrastructure automation framework for Cisco IOS, Mikrotik, and Juniper with automated backups, SHA256 diff, and Jinja2 batch provisioning.",
             desc_cisco: "Interactive Cisco network training dashboard featuring an IOS CLI terminal simulator, visual router/switch topologies, and real-time command validation.",
             desc_netpulse: "Real-time 3D cloud network observability cockpit, routing topology, and SOC telemetry with Three.js WebGL, 60 FPS Canvas charts, and OpenTelemetry.",
-            desc_zterm: "Automated wrapper script that receives an IP/Range, executes a silent Nmap scan, and cross-references services with CVE databases to generate Markdown reports.",
             desc_hardening: "Bash hardening tool for the infrastructure layer. Performs Linux server shielding, automated log analysis for anomaly detection (Brute Force/Sudo), and intelligent Firewall rule management (UFW/IPTables).",
             desc_cdpr: "Automation tool developed in Bash/PowerShell focused on network infrastructure and security. The script automates the passive capture and analysis of Layer 2 (Data Link) packets using the cdpr utility and network filter injection to silently and efficiently map the topology of switches connected to the workstation.",
             header_stats: "GitHub Stats",
